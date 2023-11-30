@@ -1,12 +1,16 @@
 import java.util.Scanner;
 
 class Game{
-    Player currentPlayer;
-    int piecesLeft;
+    private Player currentPlayer;
+    private Player player1;
+    private Player player2;
+    private int piecesLeft;
   
-    Game(Player p){
-      currentPlayer = p;
+    public Game(Player p1, Player p2){
+      player1 = p1;
+      player2 = p2;
     }
+
     public void setMaxPile(){
       piecesLeft = (int) (Math.random() * 41 + 10);
     }
@@ -20,4 +24,9 @@ class Game{
       }
       piecesLeft -= piecesRemove;
     }
+
+    public int getPiecesLeft() {
+      return piecesLeft;
+    }
+
   }
