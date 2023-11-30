@@ -3,12 +3,10 @@ public class Runner {
     
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
-        Player player1 = new Player();
-        Player player2 = new Player();
         System.out.println("Enter Player 1 Name: ");
-        player1.setName(input.nextLine());
+        Player player1 = new Player(input.nextLine());
         System.out.println("Enter Player 2 Name: ");
-        player2.setName(input.nextLine());
+        Player player2 = new Player(input.nextLine());
 
         Game nim  = new Game(player1, player2);
         nim.setMaxPile();

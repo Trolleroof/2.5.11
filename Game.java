@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Game{
     private Player currentPlayer;
     private Player player1;
-    private Player player2;
+    private Player player2; //ad the autoplay
     private int piecesLeft;
   
     public Game(Player p1, Player p2){

@@ -1,11 +1,14 @@
 public class Player {
-    private String name;
+    protected String name;
 
+    public Player (String name){
+        this.name = name;
+    }
     public void setName(String n) {
         this.name = n;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 }
