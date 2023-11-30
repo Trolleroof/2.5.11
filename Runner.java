@@ -14,6 +14,12 @@ public class Runner {
         nim.setMaxPile();
         System.out.println("Welcome to the game!");
         System.out.println("Current pieces left: " + nim.getPiecesLeft());
+
+        while (nim.getGameStatus() == false) {
+            nim.removePieces();
+        }
+
+        System.out.println("The winner is: " + nim.getWinner());
     }
 
 }
