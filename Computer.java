@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class Computer {
-
     public int getComputerMove(int left) {
-        if (left % 3 == 0) {
+        if (left == 2){
+            return 1;
+        }
+        else if (left % 3 == 0) {
             return (int) (Math.random() * 2) + 1;
         } else {
             return left % 3;
@@ -16,12 +18,15 @@ public class Computer {
         int left = sc.nextInt();
 
         while (left > 0) {
-            String currentPlayer = "computer";
-            String humanPlayer;
             int computerMove = getComputerMove(left);
             System.out.println("Computer takes " + computerMove);
             left -= computerMove;
             System.out.println("Now there are " + left + " sticks left.");
+
+            if (left <= 0) {
+                System.out.println("You win!");
+                return;
+            }
 
             System.out.println("What's your move? (1 or 2)");
             int person = sc.nextInt();
@@ -34,17 +39,10 @@ public class Computer {
             left -= person;
             System.out.println("Now there are " + left + " sticks left.");
 
-            if (currentPlayer == "computer") {
-                currentPlayer = humanPlayer;
-              } else {
-                currentPlayer = "computer";
-              }
-        
-              if (piecesLeft == 0) {
-                setWinner(currentPlayer);
+            if (left <= 0) {
+                System.out.println("Computer wins!");
                 return;
-              }
-           
+            }
         }
     }
 
