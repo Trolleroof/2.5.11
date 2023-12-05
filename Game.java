@@ -70,7 +70,6 @@ class Game{
         player1 = p1;
         player2 = player2;
         currentPlayer = p1;
-
         
       }
 
