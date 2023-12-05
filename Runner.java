@@ -7,7 +7,7 @@ public class Runner {
         Player player2 = new Player();
         System.out.println("Enter Player 1 Name: ");
         player1.setName(input.nextLine());
-        System.out.println("Enter Player 2 Name: ");
+        System.out.println("Enter the Player 2 Name: ");
         player2.setName(input.nextLine());
 
         Game nim  = new Game(player1, player2);
