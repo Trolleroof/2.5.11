@@ -3,14 +3,14 @@ import java.util.Scanner;
 class Game{
     private Player currentPlayer;
     private Player player1;
-    private Player player2;
+    private Player player2; 
     private int piecesLeft;
     private Boolean gameOver = false;
     private Player winner;
   
-    public Game(Player p1, Player p2){
+    public Game(Player p1, Player player2){
       player1 = p1;
-      player2 = p2;
+      player2 = player2;
       currentPlayer = p1;
     }
 
@@ -33,6 +33,7 @@ class Game{
         
       }
       piecesLeft -= piecesRemove;
+      System.out.println(currentPlayer.getName()+ "removed " + piecesRemove + " sticks.");
       System.out.println("There are " + piecesLeft + " pieces left.");
 
       
@@ -65,5 +66,11 @@ class Game{
       return winner.getName();
     }
 
+    public void Gamepc(Player p1, Computer player2){
+        player1 = p1;
+        player2 = player2;
+        currentPlayer = p1;
+        
+      }
 
   }
