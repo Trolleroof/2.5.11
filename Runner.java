@@ -20,6 +20,8 @@ public class Runner {
         }
 
         System.out.println("The winner is: " + nim.getWinner());
+        System.out.println("Would you like to play again? (y/n)");
+        String piecesRemove = input.next();
     }
 
 }
